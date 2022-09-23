@@ -1,0 +1,3 @@
+https://ru.stackoverflow.com/questions/828113/Как-связать-уже-созданный-репозиторий-с-локальным
+https://yandex.ru/search/?text=пример+урла+с+якорем+и+гетзапросом&lr=4&clid=2378387-1&win=559 
+https://translate.yandex.ru/?lang=en-ru&text=Cannot%20set%20properties%20of%20null%20(setting%20%27insertAdjacentElement%27)
