@@ -1,0 +1,10 @@
+{
+    "editor.columnSelection": true,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.formatOnSave": true,
+    "python.testing.pytestArgs": [
+        "."
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": false,
+}
