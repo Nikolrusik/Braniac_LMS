@@ -1,21 +1,27 @@
-{
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Python: Django",
-      "type": "python",
-      "request": "launch",
-      "program": "${workspaceFolder}/manage.py",
-      "args": ["runserver"],
-      "django": true
-    },
-    {
-      "name": "Python: Django Tests",
-      "type": "python",
-      "request": "launch",
-      "program": "${workspaceFolder}/manage.py",
-      "args": ["test"],
-      "django": true
+  { "configurations" : [
+        {
+            "name": "Django",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": false,
+            "pythonPath": "${workspaceRoot}/venv/Scripts/python.exe",
+            "program": "${workspaceRoot}/manage.py",
+            "cwd": "${workspaceRoot}",
+            "args": [
+                "runserver",
+                "--noreload", 
+                "--nothreading"
+            ],
+            "debugOptions": [
+                "RedirectOutput",
+                "Django"
+            ]
+        },
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}"
+        },
+      ]
     }
-  ]
-}

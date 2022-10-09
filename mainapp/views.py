@@ -12,6 +12,15 @@ class Index(TemplateView):
 class News(TemplateView):
     template_name = "mainapp/news.html"
 
+    def get_context_data(self, **kwargs):
+        # Get all previous data
+        context = super().get_context_data(**kwargs)
+        context['news_title'] = "Громкий новостной заголовок"
+        context[
+            'news_preview'
+        ] = "Предварительное описание, которое заинтересует каждого"
+        return context
+
 
 class Courses(TemplateView):
     template_name = "mainapp/courses_list.html"
