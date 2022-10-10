@@ -5,11 +5,11 @@ from django.views.generic import View, TemplateView
 # Create your views here.
 
 
-class Index(TemplateView):
+class IndexPageView(TemplateView):
     template_name = "mainapp/index.html"
 
 
-class News(TemplateView):
+class NewsPageView(TemplateView):
     template_name = "mainapp/news.html"
 
     def get_context_data(self, **kwargs):
@@ -19,20 +19,21 @@ class News(TemplateView):
         context[
             'news_preview'
         ] = "Предварительное описание, которое заинтересует каждого"
+        context['range'] = range(5)
         return context
 
 
-class Courses(TemplateView):
+class CoursesPageView(TemplateView):
     template_name = "mainapp/courses_list.html"
 
 
-class Contacts(TemplateView):
+class ContactsPageView(TemplateView):
     template_name = "mainapp/contacts.html"
 
 
-class Documentos(TemplateView):
+class DocumentosPageView(TemplateView):
     template_name = "mainapp/doc_site.html"
 
 
-class Login(TemplateView):
+class LoginPageView(TemplateView):
     template_name = "mainapp/login.html"
