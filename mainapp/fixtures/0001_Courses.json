@@ -1,0 +1,26 @@
+[
+    {
+        "model": "mainapp.courses",
+        "pk": 1,
+        "fields": {
+            "title": "Курс1",
+            "image_path": "",
+            "body": "Описание курса1",
+            "create_date": "2022-10-13T19:24:08.216Z",
+            "price": "109.99",
+            "deleted": false
+        }
+    },
+    {
+        "model": "mainapp.courses",
+        "pk": 2,
+        "fields": {
+            "title": "Курс2",
+            "image_path": "",
+            "body": "Описание курса2",
+            "create_date": "2022-10-13T19:24:33.739Z",
+            "price": "170000.99",
+            "deleted": false
+        }
+    }
+]

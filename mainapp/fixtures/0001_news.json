@@ -1,0 +1,67 @@
+[
+    {
+        "model": "mainapp.news",
+        "pk": 1,
+        "fields": {
+            "title": "New1",
+            "preambula": null,
+            "body": "BodyNew1",
+            "body_as_markdown": false,
+            "create_date": "2022-10-13T19:20:28.687Z",
+            "update_date": "2022-10-13T19:20:36.779Z",
+            "deleted": false
+        }
+    },
+    {
+        "model": "mainapp.news",
+        "pk": 2,
+        "fields": {
+            "title": "New2",
+            "preambula": null,
+            "body": "BodyNew2",
+            "body_as_markdown": false,
+            "create_date": "2022-10-13T19:20:45.126Z",
+            "update_date": "2022-10-13T19:20:46.052Z",
+            "deleted": false
+        }
+    },
+    {
+        "model": "mainapp.news",
+        "pk": 3,
+        "fields": {
+            "title": "New3",
+            "preambula": null,
+            "body": "BodyNew3",
+            "body_as_markdown": false,
+            "create_date": "2022-10-13T19:20:53.144Z",
+            "update_date": "2022-10-13T19:20:54.405Z",
+            "deleted": false
+        }
+    },
+    {
+        "model": "mainapp.news",
+        "pk": 4,
+        "fields": {
+            "title": "New4",
+            "preambula": null,
+            "body": "BodyNew5",
+            "body_as_markdown": false,
+            "create_date": "2022-10-13T19:21:01.461Z",
+            "update_date": "2022-10-13T19:21:02.984Z",
+            "deleted": false
+        }
+    },
+    {
+        "model": "mainapp.news",
+        "pk": 5,
+        "fields": {
+            "title": "New7",
+            "preambula": null,
+            "body": "BodyNew6",
+            "body_as_markdown": false,
+            "create_date": "2022-10-13T19:21:10.042Z",
+            "update_date": "2022-10-13T19:21:11.798Z",
+            "deleted": false
+        }
+    }
+]

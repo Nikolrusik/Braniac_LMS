@@ -33,17 +33,14 @@ class News(models.Model):
         editable=False
     )
 
+    deleted = models.BooleanField(default=False)
 
-deleted = models.BooleanField(default=False)
+    def __str__(self):
+        return self.title
 
-
-def __str__(self):
-    return self.title
-
-
-def delete(self, *args):
-    self.deleted = True
-    self.save()
+    def delete(self, *args):
+        self.deleted = True
+        self.save()
 
 
 class Courses(models.Model):
@@ -54,7 +51,8 @@ class Courses(models.Model):
     )
     image_path = models.CharField(
         max_length=256,
-        verbose_name='Image_path'
+        verbose_name='Image_path',
+        null=True
     )
     body = models.TextField(verbose_name='Body')
     create_date = models.DateTimeField(
