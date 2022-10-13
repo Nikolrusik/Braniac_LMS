@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic import View, TemplateView
 
+from mainapp.models import News
 # Create your views here.
 
 
@@ -15,10 +16,8 @@ class NewsPageView(TemplateView):
     def get_context_data(self, **kwargs):
         # Get all previous data
         context = super().get_context_data(**kwargs)
-        context['news_title'] = "Громкий новостной заголовок"
-        context[
-            'news_preview'
-        ] = "Предварительное описание, которое заинтересует каждого"
+
+        context['news'] = News.objects.all()
         context['range'] = range(5)
         return context
 
