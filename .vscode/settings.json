@@ -1,5 +1,5 @@
 {
-    "editor.columnSelection": true,
+    "editor.columnSelection": false,
     "editor.wordWrap": "wordWrapColumn",
     "editor.formatOnSave": true,
     "python.testing.pytestArgs": [
