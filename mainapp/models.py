@@ -43,7 +43,14 @@ class News(models.Model):
         self.save()
 
 
+
+class CoursesManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(deleted=False)
+
+
 class Courses(models.Model):
+    objects = CoursesManager()
 
     title = models.CharField(
         max_length=256,
