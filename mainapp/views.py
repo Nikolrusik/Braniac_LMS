@@ -17,7 +17,10 @@ class NewsPageView(TemplateView):
         # Get all previous data
         context = super().get_context_data(**kwargs)
 
-        context['news'] = News.objects.all()
+        context['news_title'] = "Громкий новостной заголовок"
+        context[
+            'news_preview'
+        ] = "Предварительное описание, которое заинтересует каждого"
         context['range'] = range(5)
         return context
 
