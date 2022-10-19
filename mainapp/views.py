@@ -32,7 +32,6 @@ class NewsPageDetailView(TemplateView):
         context["news_object"] = get_object_or_404(News, pk=pk)
         return context
 
-
 class CoursesPageView(TemplateView):
     template_name = "mainapp/courses_list.html"
 
@@ -59,9 +58,11 @@ class CoursesDetailView(TemplateView):
         return context
 
 
+
 class ContactsPageView(TemplateView):
     template_name = "mainapp/contacts.html"
 
 
 class DocumentosPageView(TemplateView):
     template_name = "mainapp/doc_site.html"
+

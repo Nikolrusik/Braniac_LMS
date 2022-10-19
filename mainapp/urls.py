@@ -9,6 +9,7 @@ urlpatterns = [
     path("contacts/", views.ContactsPageView.as_view(), name="contacts"),
     path("news/", views.NewsPageView.as_view(), name="news"),
     path("news/<int:pk>/", views.NewsPageDetailView.as_view(), name="news_detail"),
+
     path("courses/", views.CoursesPageView.as_view(), name="courses"),
     path(
         "courses/<int:pk>/",
