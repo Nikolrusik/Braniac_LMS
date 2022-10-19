@@ -10,12 +10,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item {% if request.resolver_match.view_name ==
-'mainapp:news' %}active{% endif %}">
+        <li class="nav-item {% if request.resolver_match.view_name == 'mainapp:news' %}active {% endif %}">
           <a class="nav-link" href="{% url 'mainapp:news' %}">Новости</a>
         </li>
-        <li class="nav-item {% if request.resolver_match.view_name ==
-'mainapp:courses' %}active{% endif %}">
+        <li class="nav-item {% if request.resolver_match.view_name == 'mainapp:courses' %}active{% endif %}">
           <a class="nav-link" href="{% url 'mainapp:courses' %}">Курсы</a>
         </li>
         {% if user.is_authenticated %}
@@ -43,8 +41,7 @@
           <a class="nav-link" href="{% url 'authapp:login' %}">Вход</a>
         </li>
         {% endif %}
-        <li class="nav-item {% if request.resolver_match.view_name ==
-'mainapp:contacts' %}active{% endif %}">
+        <li class="nav-item {% if request.resolver_match.view_name == 'mainapp:contacts' %}active {% endif %}">
           <a class="nav-link" href="{% url 'mainapp:contacts' %}">Контакты</a>
         </li>
       </ul>
