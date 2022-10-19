@@ -1,16 +1,19 @@
+from django.utils.translation import gettext_lazy as _
+import os
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView
 from django.contrib import messages
+from django.http import HttpResponseRedirect
 from authapp import models
 from django.views.generic import TemplateView
 from django.utils.safestring import mark_safe
 from django.urls import reverse_lazy
-from django.http import HttpResponseRedirect
 
 
 class CustomLoginView(LoginView):
     def form_valid(self, form):
         ret = super().form_valid(form)
+
         message = _("Login success!<br>Hi, %(username)s") % {
             "username": self.request.user.get_full_name()
             if self.request.user.get_full_name()
