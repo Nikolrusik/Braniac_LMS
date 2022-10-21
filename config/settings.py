@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mainapp',
     'authapp',
+    'crispy_forms',
+
 ]
 
 MIDDLEWARE = [
@@ -145,3 +147,5 @@ LOGOUT_REDIRECT_URL = "mainapp:main_page"
 
 # Message settings
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
