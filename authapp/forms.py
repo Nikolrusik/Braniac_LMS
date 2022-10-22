@@ -53,7 +53,7 @@ class CustomUserChangeForm(forms.ModelForm):
 
     def clean_age(self):
         data = self.cleaned_data.get("age")
-        if data < 18 or data > 100:
+        if data < 10 or data > 100:
             raise ValidationError(_('Please, enter a valid age!'))
         return data
 

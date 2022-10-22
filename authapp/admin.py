@@ -1,13 +1,8 @@
 from django.contrib import admin
-from mainapp import models as mainapp_models
+from authapp import models
 
 
-@admin.register(mainapp_models.News)
-class NewsAdmin(admin.ModelAdmin):
-    pass
-
-
-@admin.register(mainapp_models.Lessons)
-class LessonsAdmin(admin.ModelAdmin):
-    list_display = ['id', 'title', 'teacher', 'deleted']
-# Register your models here.
+@admin.register(models.CustomUser)
+class CustomUserAdmin(admin.ModelAdmin):
+    list_display = ['id', 'username', 'email', 'is_active', 'date_joined']
+    ordering = ['-date_joined']
