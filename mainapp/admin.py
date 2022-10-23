@@ -25,3 +25,8 @@ class LessonsAdmin(admin.ModelAdmin):
         queryset.update(deleted=True)
 
     mark_deleted.short_description = _("Mark deleted")
+
+
+@admin.register(mainapp_models.Courses)
+class CoursesAdmin(admin.ModelAdmin):
+    list_per_page = 5
