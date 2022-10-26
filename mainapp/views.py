@@ -13,6 +13,7 @@ from django.contrib.auth.mixins import (
 from django.http import JsonResponse
 from django.template.loader import render_to_string
 from mainapp import forms as mainapp_forms
+from django.core.cache import cache
 
 
 from mainapp import forms, models as mainapp_models
@@ -91,9 +92,22 @@ class CoursesDetailView(TemplateView):
                 context["feedback_form"] = mainapp_forms.CourseFeedbackForm(
                     course=context["course_object"], user=self.request.user
                 )
-        context['feedback_list'] = mainapp_models.CourseFeedback.objects.filter(
-            course=context['course_object']
-        ).order_by('-created', 'rating')[:5]
+        cached_feedback = cache.get(f"feedback_list_{pk}")
+
+        if not cached_feedback:
+            # 5 minutes
+            context["feedback_list"] = (
+                mainapp_models.CourseFeedback.objects.filter(
+                    course=context["course_object"]
+                )
+                .order_by("-created", "-rating")[:5]
+                .select_related()
+            )
+
+            cache.set(f"feedback_list_{pk}",
+                      context["feedback_list"], timeout=300)
+        else:
+            context["feedback_list"] = cached_feedback
         return context
 
 
