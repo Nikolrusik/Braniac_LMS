@@ -6,7 +6,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <!-- ChartJS -->
@@ -18,7 +17,6 @@
         Welcome to Braniac!
         {% endblock title %}
     </title>
-
 </head>
 
 <body>
@@ -26,7 +24,6 @@
     {% block messages %}
     {% include 'includes/messages.html' %}
     {% endblock messages %}
-
     <div class="container-md">
         {% block content %}
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
@@ -37,7 +34,6 @@
         {% endblock content %}
     </div>
     <!-- Footer -->
-
     <div class="container-lg mt-auto">
         <hr>
         <div class="row justify-content-center">
@@ -47,14 +43,13 @@
                 </p>
                 <p>
                 <ul class="list-unstyled">
-
                     <li><a href="{% url 'mainapp:main_page' %}">Домашняя</a></li>
                     <li><a href="{% url 'mainapp:news' %}">Новости</a></li>
                     {% if user.is_authenticated %}
                     <li><a href="{% url 'authapp:logout' %}">Выйти</a></li>
                     {% else %}
                     <li><a href="{% url 'authapp:login' %}">Войти</a></li>
-
+                    {% endif %}
                 </ul>
                 </p>
             </div>
@@ -67,10 +62,8 @@
                     <li><a href="#">Положения &amp; Условия</a></li>
                     <li><a href="#">Конфиденциальность &amp; Cookies</a></li>
                     <li><a href="#">Документация по API</a></li>
-
                     <li><a href="{% url 'mainapp:documentos' %}">Документация по сайту</a>
                     </li>
-
                 </ul>
                 </p>
             </div>
@@ -81,12 +74,10 @@
                 <p>
                 <div class="row justify-content-around">
                     <div><a href="#"><i class="fab fa-vk fa-2x"></i></a></div>
-
                     <div><a href="#"><i class="fab fa-facebook-f fa-2x"></i></a>
                     </div>
                     <div><a href="#"><i class="fab fa-instagram fa-2x"></i></a>
                     </div>
-
                     <div><a href="#"><i class="fab fa-pinterest-p fa-2x"></i></a></div>
                 </div>
                 </p>
@@ -95,13 +86,11 @@
                 </p>
                 <p>
                 <div class="row justify-content-around">
-
                     <div><a href="#"><i class="fab fa-app-store fa-2x"></i></a>
                     </div>
                     <div><a href="#"><i class="fab fa-google-play fa-2x"></i></a></div>
                     <div><a href="#"><i class="fab fa-windows fa-2x"></i></a>
                     </div>
-
                 </div>
                 </p>
             </div>
@@ -112,19 +101,16 @@
             </div>
         </div>
     </div>
-
     <!-- /Footer -->
     <!-- JavaScript section -->
     <!-- Bootstrap -->
     <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
     <script src="{% static 'js/popper.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
-
     <!-- ChartJs -->
     <script src="{% static 'js/Chart.min.js' %}"></script>
     <!-- FontAwesome -->
     <script src="{% static 'js/fontawesome.all.min.js' %}"></script>
-
     {% block js %}
     <script>
         $(document).ready(function () {
@@ -136,7 +122,6 @@
         });
     </script>
     {% endblock js %}
-
 </body>
 
 </html>
