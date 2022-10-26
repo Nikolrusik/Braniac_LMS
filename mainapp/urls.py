@@ -21,5 +21,7 @@ urlpatterns = [
     path("course_feedback/",
          views.CourseFeedbackFormProcessView.as_view(),
          name='course_feedback'),
-    path("documentos/", views.DocumentosPageView.as_view(), name="documentos")
+    path("documentos/", views.DocumentosPageView.as_view(), name="documentos"),
+    path("log_view/", views.LogView.as_view(), name="log_view"),
+    path("log_download/", views.LogDownloadView.as_view(), name="log_download"),
 ]
