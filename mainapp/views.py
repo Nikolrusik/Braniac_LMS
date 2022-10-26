@@ -29,6 +29,9 @@ class NewsListView(ListView):
     def get_queryset(self):
         return super().get_queryset().filter(deleted=False)
 
+    def get_context_data(self, **kwargs):
+        # Get all previous data
+        context = super().get_context_data(**kwargs)
 
 class NewsCreateView(PermissionRequiredMixin, CreateView):
     model = mainapp_models.News
