@@ -32,7 +32,7 @@ class IndexPageView(TemplateView):
 
 class NewsListView(ListView):
     model = mainapp_models.News
-    paginate_by = 5
+    paginate_by = 2
 
     def get_queryset(self):
         return super().get_queryset().filter(deleted=False)
@@ -40,6 +40,7 @@ class NewsListView(ListView):
     def get_context_data(self, **kwargs):
         # Get all previous data
         context = super().get_context_data(**kwargs)
+        return context
 
 
 class NewsCreateView(PermissionRequiredMixin, CreateView):
