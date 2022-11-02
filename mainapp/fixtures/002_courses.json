@@ -1,0 +1,14 @@
+[
+    {
+        "model": "mainapp.courses",
+        "pk": 1,
+        "fields": {
+            "title": "Python-разработка",
+            "image_path": "img/course001.jpg",
+            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aperiam, dicta minus, exercitationem nulla maiores ut eum magni eos quaerat nam? Blanditiis, debitis! In fugit repellendus iure atque asperiores iusto?",
+            "create_date": "2022-10-23T19:39:04.437Z",
+            "price": "1999.00",
+            "deleted": false
+        }
+    }
+]

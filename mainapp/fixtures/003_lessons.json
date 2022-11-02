@@ -1,0 +1,26 @@
+[
+    {
+        "model": "mainapp.lessons",
+        "pk": 1,
+        "fields": {
+            "title": "Урок 1",
+            "create_date": "2022-11-02T13:49:06.777Z",
+            "lesson_date": "2022-11-02T13:49:01Z",
+            "teacher": 1,
+            "course": 1,
+            "deleted": false
+        }
+    },
+    {
+        "model": "mainapp.lessons",
+        "pk": 2,
+        "fields": {
+            "title": "Урок 2",
+            "create_date": "2022-11-02T13:49:24.271Z",
+            "lesson_date": "2022-11-03T13:49:18Z",
+            "teacher": 2,
+            "course": 1,
+            "deleted": false
+        }
+    }
+]

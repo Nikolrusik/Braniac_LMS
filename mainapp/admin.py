@@ -30,3 +30,8 @@ class LessonsAdmin(admin.ModelAdmin):
 @admin.register(mainapp_models.Courses)
 class CoursesAdmin(admin.ModelAdmin):
     list_per_page = 5
+
+
+@admin.register(mainapp_models.Teachers)
+class TeachersAdmin(admin.ModelAdmin):
+    list_per_page = 10

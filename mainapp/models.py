@@ -13,9 +13,9 @@ class News(models.Model):
         max_length=256,
         verbose_name='Title'
     )
-    preambula = models.CharField(
+    preambule = models.CharField(
         max_length=1024,
-        verbose_name='Preambula',
+        verbose_name='Preambule',
         blank=True,
         null=True
     )
@@ -92,11 +92,12 @@ class Teachers(models.Model):
     )
     birthday = models.DateField(
         verbose_name='Birthday',
-        editable=False
+        editable=True
     )
     course = models.ForeignKey(
         'Courses',
         null=True,
+        blank=True,
         on_delete=models.SET_NULL)
     # Преподаватель может не вести никакой курс
 

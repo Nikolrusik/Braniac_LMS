@@ -1,0 +1,1 @@
+[{"model": "mainapp.teachers", "pk": 1, "fields": {"name": "Михаил", "birthday": "1997-06-01", "course": 1}}, {"model": "mainapp.teachers", "pk": 2, "fields": {"name": "Андрей", "birthday": "1990-11-02", "course": null}}]
