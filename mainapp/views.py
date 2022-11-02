@@ -111,6 +111,13 @@ class CoursesDetailView(TemplateView):
 
             cache.set(f"feedback_list_{pk}",
                       context["feedback_list"], timeout=300)
+            # Archive object for tests --->
+            import pickle
+            with open(
+                f"mainapp/fixtures/006_feedback_list_{pk}.bin", "wb"
+            ) as outf:
+                pickle.dump(context["feedback_list"], outf)
+            # <--- Archive object for tests
         else:
             context["feedback_list"] = cached_feedback
         return context

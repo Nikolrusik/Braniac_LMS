@@ -1,0 +1,41 @@
+[
+    {
+        "model": "mainapp.news",
+        "pk": 1,
+        "fields": {
+            "title": "Рыбак не увидел рыбака из далека",
+            "preambule": "super check",
+            "body": "Чертовски странная вещь",
+            "body_as_markdown": false,
+            "create_date": "2022-10-23T13:50:20.664Z",
+            "update_date": "2022-10-27T20:15:36.181Z",
+            "deleted": false
+        }
+    },
+    {
+        "model": "mainapp.news",
+        "pk": 2,
+        "fields": {
+            "title": "Заголовок 2",
+            "preambule": "super check",
+            "body": "круто",
+            "body_as_markdown": false,
+            "create_date": "2022-10-27T20:15:51.499Z",
+            "update_date": "2022-10-27T20:15:51.500Z",
+            "deleted": false
+        }
+    },
+    {
+        "model": "mainapp.news",
+        "pk": 3,
+        "fields": {
+            "title": "Заголовок 3",
+            "preambule": "super check",
+            "body": "описание",
+            "body_as_markdown": false,
+            "create_date": "2022-10-27T20:16:10.648Z",
+            "update_date": "2022-10-27T20:16:10.648Z",
+            "deleted": false
+        }
+    }
+]
