@@ -220,7 +220,6 @@ CELERY_RESULT_BACKEND = "redis://localhost:6379"
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = "var/email-messages/"
 
-
 # Internationalization
 
 LOCALE_PATHS = [BASE_DIR / "locale"]

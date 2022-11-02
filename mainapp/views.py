@@ -43,6 +43,7 @@ class NewsListView(ListView):
         return context
 
 
+
 class NewsCreateView(PermissionRequiredMixin, CreateView):
     model = mainapp_models.News
     fields = "__all__"
