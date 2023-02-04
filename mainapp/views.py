@@ -42,7 +42,6 @@ class NewsListView(ListView):
         context = super().get_context_data(**kwargs)
         return context
 
-
 class NewsCreateView(PermissionRequiredMixin, CreateView):
     model = mainapp_models.News
     fields = "__all__"

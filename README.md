@@ -1,1 +1,1 @@
-# GB_Django
+# Braniac LMS
